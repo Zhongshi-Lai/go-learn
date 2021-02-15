@@ -36,4 +36,12 @@ func main() {
 
 	fmt.Println(c, d)
 
+	// 接口赋值只能超集向子集转换
+
+	// 对象赋值给接口
+	// 接口赋值给接口
+
+	var f Lesser = b
+	fmt.Println(f)
+
 }
