@@ -12,6 +12,7 @@ func (s Student) tellName() {
 
 func (s Student) alterName() {
 	s.name = "xiaoming gai"
+	fmt.Println("aaa")
 }
 
 func (s *Student) alterNameV2() {

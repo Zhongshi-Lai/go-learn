@@ -10,8 +10,11 @@ func testStringFuncParams(s string) {
 
 func testPointerFuncParams(s *string) {
 	fmt.Println("===in func pointer ===")
+	fmt.Println(s)
 	fmt.Println(*s)
-	fmt.Println(*s + "1")
+	// fmt.Println(*s + "1")
+	*s += "1"
+	fmt.Println(s)
 	fmt.Println("===in func pointer ===")
 }
 
@@ -20,16 +23,19 @@ func main() {
 	// 本质是内存地址的变动,传入func之后是另一个内存地址了
 	// int byte bool float string
 	// array struct pointer
+
 	a := "hello"
+	b := &a
+
+
 	fmt.Println("===before func ===")
 	fmt.Println(&a)
 	fmt.Println("===before func ===")
 	testStringFuncParams(a)
 
-	// 即使传输指针进去,修改*的值,也不会影响外部的
+	// TODO(laizhongshi):这块我迷茫了,指针到底是值语义还是引用语义
 	testPointerFuncParams(&a)
 
-	b := &a
 	fmt.Println(b)
 	fmt.Println(a)
 	// 引用类型 slice map channel interface

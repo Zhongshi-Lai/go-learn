@@ -4,12 +4,12 @@ import "fmt"
 
 func main() {
 
-// JLOOP:
+JLOOP:
 	for j := 0; j < 5; j++ {
-	ILOOP:
+	// ILOOP:
 		for i := 0; i < 10; i++ {
 			if i > 5 {
-				break ILOOP
+				break JLOOP
 			}
 			fmt.Println(i)
 		}

@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"unicode/utf8"
+)
 
 func main() {
 	var chineseStr = "hello 世界"
@@ -15,6 +18,9 @@ func main() {
 
 	// 下标法遍历,中文字符占3个
 	n := len(chineseStr)
+	fmt.Println("len<<<", n)
+	nStr := utf8.RuneCountInString(chineseStr)
+	fmt.Println("lenstr<<<", nStr)
 	for i := 0; i < n; i++ {
 		fmt.Println(chineseStr[i])
 	}
