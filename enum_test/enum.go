@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 // 门店购订单状态
 type SGOrderStatus int
 
@@ -15,10 +13,10 @@ const (
 )
 
 func main() {
-	a := -1
+	// a := -1
 
-	var b SGOrderStatus
-	fmt.Println(b)
-	b =a
+	// var b SGOrderStatus
+	// fmt.Println(b)
+	// b =a
 
 }
